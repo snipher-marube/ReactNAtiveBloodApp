@@ -1,11 +1,13 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import {StyleSheet, View, Text, FlatList} from 'react-native';
+import {donationRequest} from "../../Shared/components/Card/DonationCard/Data";
+import DonationCard from "../../Shared/components/Card/DonationCard";
 
 const DonationRequestScreen = () => {
     return (
-        <View>
-            <Text></Text>
-        </View>
+        <FlatList
+            data={donationRequest}
+            renderItem={({item}) => <DonationCard item={item} />}/>
     )
 };
 
